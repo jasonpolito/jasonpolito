@@ -14,7 +14,8 @@
 
 <body>
     <x-section>
-        <h1 class="text-4xl font-bold">Testing static site generation with Laravel.</h1>
+        <h1 class="text-4xl font-bold">Testing static site generation with Laravel. <a href="{{ route('test') }}">test</a>
+        </h1>
     </x-section>
 </body>
 

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>testing</h1>
+    <h1>testing <a href="{{ route('home') }}">home</a></h1>
 </body>
 
 </html>
