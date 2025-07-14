@@ -14,7 +14,13 @@
 
 <body>
     <x-section>
-        <h1 class="text-4xl font-bold">Testing static site generation with Laravel. <a href="{{ route('test') }}">test</a>
+        <x-prose>
+            <h1>Testing static site generation with Laravel.
+            </h1>
+            <p>
+                This is a test page to ensure that the static site generation works correctly with Laravel and Vite.
+                <x-link href="{{ route('test') }}">Go to Test Page</x-link>
+        </x-prose>
         </h1>
     </x-section>
 </body>
