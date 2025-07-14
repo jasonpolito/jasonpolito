@@ -2,10 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+$routes = [
+    'home',
+    'test',
+];
 
-Route::get('/test', function () {
-    return view('test');
-})->name('test');
+Route::get('/', function () {
+    return redirect()->route('home');
+});
+
+foreach ($routes as $route) {
+    Route::get("/{$route}", function () use ($route) {
+        return view($route);
+    })->name($route);
+}

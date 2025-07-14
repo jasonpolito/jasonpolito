@@ -11,13 +11,11 @@
 
 </head>
 
-<body>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
     <x-section>
-        <x-container>
-            <x-prose>
-                @yield('content')
-            </x-prose>
-        </x-container>
+        <x-prose>
+            @yield('content')
+        </x-prose>
     </x-section>
 </body>
 

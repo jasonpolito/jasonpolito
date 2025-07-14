@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'py-4 md:py-8 xl:py-16']) }}>
+<section {{ $attributes->merge(['class' => 'py-4 md:py-8 lg:py-16']) }}>
     <x-container>
         {{ $slot }}
     </x-container>
