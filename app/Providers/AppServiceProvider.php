@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Spatie\Export\Exporter;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,5 +15,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(Exporter $exporter): void {}
+    public function boot(): void
+    {
+        Blade::directive('customer', function ($expression) {
+            return "<?php echo str_ireplace('Laravel', 'custom directives on build', $expression); ?>";
+        });
+    }
 }
