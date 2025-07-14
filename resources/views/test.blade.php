@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('_layouts.basic')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body>
-    <h1>testing <a href="{{ route('home') }}">home</a></h1>
-</body>
-
-</html>
+@section('content')
+    <x-section>
+        <x-prose>
+            <h1>Testing a sub page.
+            </h1>
+            <p>
+                Return home.
+                <x-link href="{{ route('home') }}">Go to Home Page</x-link>
+            </p>
+        </x-prose>
+    </x-section>
+@endsection
