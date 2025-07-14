@@ -3,13 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 $routes = [
-    'home',
     'test',
 ];
 
 Route::get('/', function () {
-    return redirect()->route('home');
-});
+    return view('home');
+})->name('home');
 
 foreach ($routes as $route) {
     Route::get("/{$route}", function () use ($route) {
