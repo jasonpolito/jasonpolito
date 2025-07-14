@@ -3,6 +3,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
+import autoprefixer from "autoprefixer";
 
 function replaceUrlsInDist({ dir, find, replace }) {
     return {
@@ -50,4 +51,11 @@ export default defineConfig({
             replace: "https://jasonpolito.github.io/jasonpolito",
         }),
     ],
+    css: {
+        postcss: {
+            plugins: [
+                autoprefixer({}), // add options if needed
+            ],
+        },
+    },
 });
