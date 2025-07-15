@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+<body class="bg-white text-gray-800 antialiased dark:bg-gray-900 dark:text-gray-100">
     <x-section>
         <x-prose>
             @yield('content')

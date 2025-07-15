@@ -6,10 +6,15 @@
     Laravel and Vite.')
 
 @section('content')
-    <h1 class="text-pretty">Testing static site <x-gradient-text>generation</x-gradient-text> with Laravel.
-    </h1>
+    <h1 class="text-pretty">Jason <x-gradient-text>Polito</x-gradient-text></h1>
     <p>
         This is a test page to ensure that the static site generation works correctly with Laravel and Vite.
         <x-link href="{{ route('test') }}">Go to Test Page</x-link>
+    </p>
+    <p>
+        Laravel is a modern PHP framework for <x-link href="{{ route('test') }}">building web applications</x-link>, offering
+        elegant syntax, powerful tools, and robust
+        features for rapid development.
+
     </p>
 @endsection
